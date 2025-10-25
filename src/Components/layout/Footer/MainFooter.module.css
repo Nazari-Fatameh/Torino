@@ -1,0 +1,195 @@
+.container {
+  font-family: "Yekan";
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.footerDivider {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.torino {
+  direction: rtl;
+  text-align: right;
+}
+
+.torino h4 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Yekan";
+}
+
+.torino ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.torino li {
+  color: rgba(40, 40, 40, 1);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 9px;
+  direction: rtl;
+}
+
+
+.footerBottom {
+  display: flex;
+  justify-content:space-between; 
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 10px 0;
+  /* gap: px; */
+}
+
+.footerNamad {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-auto-rows: 36px;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+
+.footerNamad img:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin-left: 5px;
+}
+
+.footerNamad img:nth-child(5) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  margin-left: 2px;
+}
+
+.footerNamad img {
+  width: 36px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footerLogoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.footerLogo {
+  width: 100px;
+  height: auto;
+
+}
+
+.footerSupport {
+  font-size: 15px;
+  font-weight: 400;
+  direction: rtl;
+  text-align: right;
+  margin-top: 5px;
+ 
+}
+
+.copyRight {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 15px;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 1);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 998px) {
+  .container {
+    width: 100%;
+    border-top: 1px solid silver;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerRow {
+    display: flex;
+    justify-content: space-between;
+
+    margin:  0   70px;
+  }
+
+  .footerDivider {
+    display: flex;
+    gap: 90px;
+  }
+  .torino h4 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  .torino li {
+    font-size: 20px;
+    font-weight: 400;
+   
+  }
+
+  .footerBottom {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .footerLogo {
+    width: 146px; /* اندازه دلخواه */
+    height: auto;
+  }
+  .footerNamad {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .footerNamad img {
+    width: 78px;
+    height: auto;
+    object-fit: contain;
+  }
+  .footerLogoSection {
+    width: 146px;
+  }
+  .copyRight {
+    width: 100%;
+    text-align: center;
+   
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+  }
+  .footerSupport {
+  white-space: nowrap;
+}
+
+}
+@media (max-width: 767px) {
+  .footerDivider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.347),
+      rgba(0, 0, 0, 0.404) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  }
+}

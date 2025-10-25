@@ -1,0 +1,46 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.icon {
+  display: block;
+}
+
+.webIcon {
+  display: none;
+  width: 160px;
+  height: auto;
+}
+
+@media (min-width: 980px) {
+  .button {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    border-radius: 10px;
+    background-color: rgb(246, 247, 246) !important;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .webIcon {
+    display: block;
+  }
+}
+

@@ -1,0 +1,209 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 30px; */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-family: "Vaziran";
+}
+
+.divDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.picturTour {
+  width: 400px;
+  height: 265px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  flex: 1;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Yekan";
+}
+
+.day {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Vaziran";
+  color: #444;
+}
+
+.tourOption {
+  display: flex;
+  gap: 40px;
+  color: #7d7d7d;
+  font-size: 16px;
+}
+
+.tourOption span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.price {
+  font-family: "Vaziran";
+}
+.numberPrice {
+  font-size: 28px;
+  color: #009eca;
+  font-family: "Vaziran";
+  font-weight: 500;
+}
+.toman {
+  font-size: 14px;
+  color: rgba(40, 40, 40, 0.8);
+  font-family: "Vaziran";
+  font-weight: 600;
+}
+.price span {
+  font-weight: 500;
+}
+
+.buyButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.buyButton:hover {
+  background-color: #12632d;
+}
+
+.tourProperty {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.propertyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 120px;
+  gap: 12px;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.propertyItem > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.propertyItem img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+.propertyLabel {
+  font-weight: 400;
+  color: rgba(68, 68, 68, 1);
+  font-size: 18px;
+  font-family: "Vaziran";
+}
+
+.propertyValue {
+  color: #000;
+  font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  .divDetails {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .picturTour {
+    width: 100%;
+    height: auto;
+  }
+
+  .tourOption {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .priceRow {
+    flex-direction: row-reverse;
+    gap: 12px;
+  }
+
+  .buyButton {
+    width: 100%;
+  }
+
+  .tourProperty {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .propertyItem {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .propertyLabel {
+    font-size: 14px;
+  }
+
+  .propertyValue {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .divDetails {
+    flex-wrap: nowrap;
+  }
+
+  .tourProperty {
+    flex-wrap: nowrap;
+  }
+}

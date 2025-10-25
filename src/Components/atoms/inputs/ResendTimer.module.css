@@ -1,0 +1,32 @@
+.timerContainer {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Yekan", sans-serif;
+}
+
+.timerText {
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.timerText span {
+  color: #28a745;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.resendButton {
+  background: none;
+  border: none;
+  color: #28a745;
+  font-size: 15px;
+  font-family: "Yekan", sans-serif;
+  cursor: pointer;
+  transition: color 0.3s;
+  
+}
+
+.resendButton:hover {
+  color: #218838;
+}

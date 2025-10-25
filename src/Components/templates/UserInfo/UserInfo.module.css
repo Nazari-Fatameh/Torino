@@ -1,0 +1,129 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: auto;
+  height: 179px;
+  margin: 0 50px;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: column;
+}
+
+.topInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topInput h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Yekan";
+}
+
+.editInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: #009eca;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Yekan";
+}
+
+.mainInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data p {
+  font-weight: 400;
+  margin: 0;
+  color: #555;
+  font-family: "Yekan";
+}
+
+.data span,
+.data input,
+.data select {
+  font-family: "Yekan";
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.data span.number,
+.data input.number {
+  font-family: "Vaziran";
+}
+
+.input,
+.selectInput,
+.dateInput {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  width: 100%;
+  font-family: "Yekan";
+}
+
+.dateInput {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.saveBtn {
+  background-color: rgba(40, 167, 69, 1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 140px;
+  cursor: pointer;
+  font-family: "Yekan";
+  height: 40px;
+  transition: 0.3s;
+}
+
+.saveBtn:hover {
+  background-color: #226e01;
+}
+
+.cancelBtn {
+  background-color: #ffffff;
+  border: 2px solid rgba(40, 167, 69, 1);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: rgba(40, 167, 69, 1);
+  width: 140px;
+  cursor: pointer;
+  height: 40px;
+  font-family: "Yekan";
+  transition: 0.3s;
+}
+
+.cancelBtn:hover {
+  background-color: #e0f8ea;
+  
+}

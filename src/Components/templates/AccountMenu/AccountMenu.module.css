@@ -1,0 +1,106 @@
+.menuWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.userButton {
+  padding: 8px 12px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  color: rgba(40, 167, 69, 1);
+  display: flex;
+  flex-direction: row;
+  font-family: "Vaziran";
+  gap: 5px;
+}
+.userButton span {
+  font-size: 18px;
+}
+.userButton img {
+  width: 24px;
+  height: 24px;
+}
+.userButton:hover {
+  background-color: #ffffff;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  width: 220px;
+  z-index: 10;
+  margin: 0;
+  align-items: flex-end; 
+  padding: 0;
+}
+
+.dropdownItem {
+  background: none;
+  font-family: "Yekan";
+  border: none;
+  padding: 8px 10px;
+  text-align: right;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  gap: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.dropdownItem span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.labelNumber {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  font-family: "Vaziran";
+  background-color: rgba(244, 244, 244, 1);
+  width: 100% !important;
+  justify-content: flex-start;
+  color: rgba(16, 65, 27, 1);
+  height: 44px;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.svgMobile {
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+.dropdownItem:last-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin-top: 4px;
+  padding-top: 10px;
+  color: rgba(212, 0, 0, 1);
+  font-weight: 500;
+}
+
+.dropdownItem:hover {
+  background-color: #d8d4d4;
+  border-radius: 10px;
+  
+}

@@ -1,0 +1,200 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.textSection {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.sliderTitr {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: "Yekan", sans-serif;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.title span {
+  color: rgb(40, 167, 69);
+}
+
+.iconSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greenWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.green {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.qestion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+
+.sliderProgrof h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 12px;
+  display: none;
+}
+
+.sliderProgrof p {
+  display: none;
+}
+
+.sliderSection {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  overflow: visible;
+}
+
+.mySwiper {
+  width: 570px;
+  height: 350px;
+  border-radius: 30px;
+}
+
+.swiperSlide {
+  width: 490px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.swiperSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.bottomControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 18px;
+}
+.arrowBtn {
+  background: none;
+border: none;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+ 
+}
+
+
+
+.arrowBtn img {
+  width: 18px;
+  height: 18px;
+  filter: none;
+    pointer-events: none; 
+}
+
+.counter {
+  font-family: "Vazir", sans-serif;
+  font-size: 18px;
+  color: rgba(40, 40, 40, 1);
+}
+
+.counter {
+  font-family: "Vazir", sans-serif;
+  font-size: 18px;
+ 
+}
+.bottomControls .arrowBtn:hover {
+  background: none !important;
+  transform: none !important;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px auto;
+  }
+
+  .textSection {
+    flex: 1;
+    margin-right: 60px;
+  }
+
+  .sliderSection {
+    flex: 1;
+    margin-left: 40px;
+    width: 389px;
+  }
+
+  .title {
+    font-size: px;
+  }
+
+  .sliderProgrof p {
+    font-size: 20px;
+    font-family: "iranSans";
+
+    color: #444;
+    line-height: 2;
+    margin-top: 8px;
+    max-width: 520px;
+    display: block;
+    font-weight: 400;
+  }
+
+  .sliderProgrof h5 {
+    font-size: 24px;
+    font-family: "Vaziran";
+    display: block;
+  }
+  .bottomControls {
+    margin-top: 24px;
+    gap: 28px;
+  }
+  .title {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+@media (max-width: 900px) {
+  .mySwiper {
+    width: 350px;
+    height: 289px;
+    border-radius: 30px;
+    margin: auto;
+  }
+}
+.counter{font-family: "Vaziran";}

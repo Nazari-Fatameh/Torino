@@ -1,0 +1,222 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 300px;
+}
+
+.infoBox {
+  border: 1px solid #00000033;
+  padding: 20px;
+  border-radius: 10px;
+  height: 230px;
+}
+
+.checkoutBox {
+  border-radius: 10px;
+  border: 1px solid #0000001a;
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user img {
+  width: 24px;
+  height: 24px;
+}
+.user h2 {
+  font-family: "Vaziran";
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form input:nth-of-type(1) {
+  grid-column: 1 / 2;
+}
+.form input:nth-of-type(2) {
+  grid-column: 2 / 3;
+}
+.form .rmdp-container {
+  grid-column: 3 / 4;
+}
+
+.input,
+.form input,
+.form select,
+.form .rmdp-input {
+  width: 100%;
+  height: 48px; 
+  border: 1px solid #808080;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-family: "Yekan";
+  font-size: 14px;
+  font-weight: 400;
+  color: #00000080;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  font-size: 12px;
+  color: #e74c3c;
+
+  font-family: "Yekan";
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.desc h2 {
+  font-family: "Yekan";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.desc p {
+  font-family: "Vaziran";
+  font-size: 16px;
+  color: rgba(40, 40, 40, 1);
+  font-weight: 400;
+}
+
+.midLine {
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    transparent 8px 10px
+  );
+  border: none;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.priceDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Vaziran";
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.price span {
+  font-family: "Vaziran";
+  font-size: 28px;
+  color: #009eca;
+  font-weight: 500;
+}
+
+.price p {
+  font-size: 14px;
+  color: #444;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.btn button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #28a745;
+  color: #fff;
+  font-family: "Vaziran";
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn button:hover {
+  background-color: #058530;
+  color: #ffcf77;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .infoBox {
+    flex: 1 1 70%;
+  }
+
+  .checkoutBox {
+    flex: 1 1 30%;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    flex-direction: column; 
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .infoBox {
+    width: 100%;
+    height: auto; 
+    order: 1; 
+  }
+
+  .checkoutBox {
+    width: 100%;
+    order: 2; 
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+
+
+  .form input,
+  .form select,
+  .form .rmdp-container,
+  .form .rmdp-container .rmdp-input {
+    width: 100%;
+    grid-column: auto;
+    box-sizing: border-box;
+    height: 48px; 
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  
+}

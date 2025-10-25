@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.textArea h1 {
+  font-size: 36px;
+  font-family: "Yekan";
+  font-weight: 600;
+}
+
+
+.textArea button {
+  width: 361px;
+  height: 75px;
+  background-color: rgba(216, 255, 225, 1);
+  border-radius: 16px;
+  color: rgba(40, 167, 69, 1);
+  font-family: "Yekan";
+  font-size: 28px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 767px){
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    margin-top: 40px;
+  }
+  .Image {
+    width: 322px;
+    height: 322px;
+  }
+
+  .textArea h1 {
+    font-size: 24px;
+    font-family: "Yekan";
+    font-weight: 600;
+  }
+  .textArea button {
+    font-size: 20px;
+    width: 232px;
+    height: 50px;
+  }
+  .textArea {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+}

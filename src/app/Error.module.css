@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+.textArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 70px;
+}
+.textArea h1 {
+  font-size: 36px;
+  font-family: "Yekan";
+  font-weight: 600;
+}
+.textArea p {
+  font-size: 24px;
+  font-family: "Yekan";
+  font-weight: 600;
+}
+@media (max-width: 767px){
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1px;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    margin-top: 40px;
+  }
+    .Image {
+   
+    width: 322px;
+    height: 322px;
+    object-fit: contain; 
+    
+}
+  .textArea h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .textArea p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+}

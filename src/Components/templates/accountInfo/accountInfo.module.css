@@ -1,0 +1,118 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: auto;
+height: 115px;
+margin:0 50px;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header h3 {
+  font-family: "Yekan";
+    font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+ 
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  color: #009eca;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Yekan";
+}
+.editBtn:hover{
+    background-color: white;
+  
+}
+.infoList {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Yekan";
+  padding: 8px 0;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.inputWrapper {
+  display: flex;
+  font-family: "Yekan";
+
+  gap: 60px;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  font-family: "Yekan";
+  font-size: 14px;
+}
+
+.saveBtn {
+  background-color: rgba(40, 167, 69, 1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-right: 100px;
+  width: 100px;
+  cursor: pointer;
+  font-family: "Yekan";
+  height: 40px;
+  transition: 0.3s;
+}
+
+.saveBtn:hover {
+  background-color: #226e01;
+  transition: all 1s;
+}
+.inlineForm {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.inlineInput {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: "Yekan";
+  margin-right: 20px;
+  font-size: 14px;
+  width: 180px;
+  direction: ltr; /* ایمیل انگلیسی */
+}
+
+.englishText {
+  direction: ltr;
+  font-family:"Vaziran"; /* اعداد و حروف انگلیسی خواناتر */
+  font-size: 14px;
+}

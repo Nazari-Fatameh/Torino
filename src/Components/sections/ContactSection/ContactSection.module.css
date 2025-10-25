@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Yekan", sans-serif;
+  border: none;
+  width: 327px;
+  margin: 30px auto;
+  overflow: visible;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.topContact {
+  display: flex;
+  align-items: center;
+  background-color: #28a745;
+  height: 128px;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+  position: relative;
+}
+
+.texts {
+  flex: 1;
+  z-index: 1;
+}
+
+.texts h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.texts span {
+  color: #10411b;
+}
+
+.texts p {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+
+.imageWrapper {
+  position: absolute;
+  top: -29px;
+  left: 40px;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+
+.contactImage {
+  object-fit: contain;
+}
+
+
+.bottomContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.phoneWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phoneWrapper span {
+  font-size: 19px;
+  color: #10411b;
+  font-weight: 600;
+}
+
+.bottomContact button {
+  width: 136px;
+  height: 38px;
+  border-radius: 9px;
+  background-color: #10411b;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Yekan", sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bottomContact button:hover {
+  background-color: #0d3417;
+}
+
+.contactImageWEB {
+  display: none;
+}
+
+@media (min-width: 999px) {
+  .container {
+    width: 1188px;
+    height: 251px;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: none;
+    border: 1px solid silver;
+    background: none;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .topContact {
+    position: relative;
+    background-color: #28a745;
+    border-radius: 10px;
+    
+    width: 790px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse; 
+    align-items: center;
+    padding: 0 60px;
+    overflow: hidden;
+  }
+
+  .texts {
+    flex: 1;
+    text-align: right;
+  }
+
+  .texts h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .texts p {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+  }
+
+
+  .contactImage {
+    display: none;
+  }
+
+  .contactImageWEB {
+    display: block;
+    width: 308px;
+    height: auto;
+    position: absolute;
+    bottom: -130px; 
+    left: 30px; 
+  }
+
+  
+  .bottomContact {
+ 
+   
+    width: 370px;
+    height: 249px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+  }
+
+  .phoneWrapper span {
+    font-size: 28px;
+  }
+
+  .bottomContact button {
+    font-size: 18px;
+    width: 175px;
+    height: 47px;
+  }
+}

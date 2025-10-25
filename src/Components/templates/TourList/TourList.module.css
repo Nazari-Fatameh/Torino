@@ -1,0 +1,118 @@
+.wrapper {
+  margin: 60px auto;
+  padding: 0 20px;
+  max-width: 1300px;
+}
+.notFoundTour {
+  font-size: 32px;
+  margin: auto;
+  font-family: "Yekan";
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 15px;
+  padding: 0 40px 40px;
+  justify-items: flex-start;
+}
+.title {
+  text-align: right;
+  margin: 0 60px 10px 40px;
+  font-family: "Yekan", sans-serif;
+  font-size: 28px;
+  color: #333;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  width: 278px;
+  height: 277px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 12px rgba(3, 102, 3, 0.293);
+}
+
+.imageCard {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  object-fit: cover;
+}
+
+.cardTitle {
+  font-family: "Yekan", "Vaziran";
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  margin-right: 10px;
+}
+.tourSummary {
+  width: 100%;
+  overflow: hidden;       
+  white-space: nowrap;     
+  text-overflow: ellipsis; 
+  font-size: 15px;
+  font-family: "Yekan";
+  color: rgba(40, 40, 40, 0.7);
+}
+
+
+.card a {
+  background-color: rgba(40, 167, 69, 1);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 4px;
+  font-family: "Yekan";
+  width: 64px;
+  height: 25px;
+  transition: background-color 0.3s;
+
+  margin-bottom: 10px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid silver;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.price {
+  font-size: 16px;
+  color: rgba(0, 158, 202, 1);
+  font-family: "Vaziran";
+}
+.toman {
+  font-size: 14px;
+  font-family: "Vaziran";
+}
+
+.card a:hover {
+  background-color: #31633c;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

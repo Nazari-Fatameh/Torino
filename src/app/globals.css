@@ -1,15 +1,3 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -35,8 +23,60 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@font-face {
+  font-family: "Yekan";
+  src: url("../../public/Fonts/Yekan/BYekan.ttf") format("woff2");
+  font-weight: 600;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Vaziran";
+  src: url("../../public/Fonts/Vaziran/Vazirmatn-Medium.ttf") format("woff2");
+  font-weight: 600;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "iranSans";
+  src: url("../../public/Fonts/A-Iranian-Sans/irsans.ttf") format("woff2");
+  font-weight: 600;
+  font-weight: 300;
+  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* 
+:global(.zaman-calendar) {
+  background: white !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px !important;
+  font-family: "iranSans", sans-serif !important;
+}
+
+:global(.zaman-day) {
+  border-radius: 8px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+:global(.zaman-day:hover) {
+  background-color: #e0f2fe !important;
+}
+
+:global(.zaman-day.selected) {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+:global(.zaman-header) {
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+} */
