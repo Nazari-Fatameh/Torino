@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "../Styles/Home.module.css";
 import ContactSection from "@/Components/sections/ContactSection";
 import SliderSection from "@/Components/sections/SliderSection";
 import OptionSection from "@/Components/sections/optionSection";

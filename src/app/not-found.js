@@ -1,14 +1,14 @@
-"use client"; 
+"use client";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import styles from "./not-found.module.css";
+import styles from "../Styles/not-found.module.css";
 
 export default function NotFound() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/"); 
+    router.push("/");
   };
 
   return (
