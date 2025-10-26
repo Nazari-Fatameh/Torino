@@ -53,30 +53,3 @@ a {
   font-style: normal;
   font-display: swap;
 }
-/* 
-:global(.zaman-calendar) {
-  background: white !important;
-  border-radius: 16px !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
-  padding: 10px !important;
-  font-family: "iranSans", sans-serif !important;
-}
-
-:global(.zaman-day) {
-  border-radius: 8px !important;
-  transition: all 0.2s ease-in-out;
-}
-
-:global(.zaman-day:hover) {
-  background-color: #e0f2fe !important;
-}
-
-:global(.zaman-day.selected) {
-  background-color: #2563eb !important;
-  color: white !important;
-}
-
-:global(.zaman-header) {
-  color: #1f2937 !important;
-  font-weight: 600 !important;
-} */

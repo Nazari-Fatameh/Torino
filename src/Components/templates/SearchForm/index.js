@@ -46,7 +46,7 @@ export default function SearchForm() {
   const destinationRef = useRef(null);
   const dateRef = useRef(null);
 
-  // مقداردهی اولیه فرم فقط یکبار
+  
   useEffect(() => {
     const originId = getQuery("originId") || "";
     const destinationId = getQuery("destinationId") || "";
@@ -57,7 +57,7 @@ export default function SearchForm() {
     });
   }, []);
 
-  // بسته شدن دراپ‌دان‌ها با کلیک بیرون
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (originRef.current && !originRef.current.contains(event.target)) {
@@ -81,7 +81,7 @@ export default function SearchForm() {
 
   return (
     <form className={styles.container} onSubmit={handleSubmit(submitHandler)}>
-      {/* مبدا */}
+    
       <Controller
         name="originId"
         control={control}
@@ -124,7 +124,6 @@ export default function SearchForm() {
         )}
       />
 
-      {/* مقصد */}
       <Controller
         name="destinationId"
         control={control}
@@ -167,7 +166,7 @@ export default function SearchForm() {
         )}
       />
 
-      {/* تاریخ */}
+    
       <Controller
         name="date"
         control={control}

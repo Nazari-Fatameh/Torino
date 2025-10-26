@@ -1,0 +1,106 @@
+.table {
+  width: 100%;
+  max-width: 330px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+  direction: rtl;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #00000040;
+}
+
+.table th {
+  padding: 15px 12px;
+  text-align: center;
+  font-family: "Yekan";
+  font-weight: 400;
+  font-size: 16px;
+  color: #282828cc;
+  background-color: #e6e6e6;
+}
+
+.table tbody {
+  font-family: "Vaziran";
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.row {
+  background-color: #ffffff;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.row:hover {
+  background-color: #b6e3ba;
+}
+
+.cell {
+  padding: 15px 10px;
+  font-family: "Vaziran", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: #282828;
+}
+
+.hide {
+  display: none;
+  padding: 15px 10px;
+  font-family: "Vaziran", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+}
+
+.noData {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Vaziran", sans-serif;
+  color: #282828;
+  padding: 14px 0;
+}
+
+tr td:nth-child(1) {
+  font-size: 9px;
+  color: #282828;
+}
+
+@media (min-width: 391px) {
+  .table {
+    max-width: 600px;
+  }
+  tr td:nth-child(1) {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide {
+    display: table-cell;
+  }
+  .table {
+    max-width: 900px;
+  }
+  .table th {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+@media (min-width: 992px) {
+  .table {
+    max-width: 960px;
+  }
+  .table th {
+    font-size: 16px;
+  }
+  .cell {
+    padding: 10px 0 5px 0;
+    font-size: 14px;
+  }
+  tr td:nth-child(1) {
+    font-size: 14px;
+  }
+}

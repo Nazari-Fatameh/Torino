@@ -38,7 +38,7 @@ export default function UserInfo() {
     },
   });
 
-  // وقتی اطلاعات از سرور اومد، فرم رو پر کن
+  
   useEffect(() => {
     if (data) {
       reset({
@@ -81,7 +81,7 @@ export default function UserInfo() {
     try {
       await mutation.mutateAsync(payload);
       toast.success("اطلاعات ذخیره شد ✅");
-      // setIsEditing(false);
+    
 
 
       queryClient.invalidateQueries(["user-profile"]);

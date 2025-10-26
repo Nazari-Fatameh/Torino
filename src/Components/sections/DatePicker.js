@@ -3,7 +3,7 @@
 import { DatePicker } from "zaman";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-// import styles from "@/styles/CheckoutPage.module.css";
+
 
 function CustomDatePicker({ register, setValue, name }) {
   const [isOpen, setIsOpen] = useState(false);

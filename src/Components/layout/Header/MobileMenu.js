@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // ✅ برای هدایت صفحه
+import { useRouter } from "next/navigation"; 
 import styles from "../Header/MobileMenu.module.css";
 
 export default function MobileMenu({ isOpen, onClose }) {
@@ -16,11 +16,11 @@ export default function MobileMenu({ isOpen, onClose }) {
 
   const handleClick = (item) => {
     if (item.id === "home") {
-      // ✅ اگر صفحه اصلی بود، هدایت کن به /
+      
       router.push("/");
       onClose();
     } else {
-      // ✅ برای بقیه، اسکرول نرم انجام بده
+      
       const section = document.getElementById(item.id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });

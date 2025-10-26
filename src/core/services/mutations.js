@@ -61,16 +61,4 @@ export const useUpdateUserProfile = (onSuccessCallback) => {
   });
 }
 
-//   return useMutation({
-//     mutationFn,
-//     onSuccess: (data) => {
-//       queryClient.invalidateQueries(["user-data"]); 
-//       toast.success("دیتا با موفقیت تغییر یافت");
-//       if (onSuccessCallback) onSuccessCallback(data);
-//     },
-//     onError: (error) => {
-//       toast.error(error?.message || "مشکلی پیش آمده، دوباره تلاش کنید");
-//     },
-//   });
-// };
 

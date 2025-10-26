@@ -51,11 +51,10 @@ export default function CheckoutPage() {
     };
 
     checkout(payload, {
-      onSuccess:async () => {
-        await api.put("/user/profile", payload);
+      onSuccess: () => {
         toast.success("خرید با موفقیت انجام شد!");
-
-        router.push("/profile/UserTour?status=success");
+    
+        router.push("/profile/userTour");
       },
       onError: () => toast.error("خطایی رخ داد، لطفاً دوباره تلاش کنید."),
     });

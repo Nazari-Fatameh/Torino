@@ -21,7 +21,7 @@ function ResendTimer({ initialTime = 90, onResend }) {
     if (!canResend) return;
     setTimeLeft(initialTime);
     setCanResend(false);
-    onResend?.(); // اگر تابع ارسال مجدد از بیرون پاس داده شده باشه، صدا زده میشه
+    onResend?.(); 
   };
 
   const formatTime = (seconds) => {

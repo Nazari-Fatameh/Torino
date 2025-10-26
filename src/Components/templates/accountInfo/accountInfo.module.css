@@ -108,11 +108,11 @@ margin:0 50px;
   margin-right: 20px;
   font-size: 14px;
   width: 180px;
-  direction: ltr; /* ایمیل انگلیسی */
+  direction: ltr; 
 }
 
 .englishText {
   direction: ltr;
-  font-family:"Vaziran"; /* اعداد و حروف انگلیسی خواناتر */
+  font-family:"Vaziran"; 
   font-size: 14px;
 }

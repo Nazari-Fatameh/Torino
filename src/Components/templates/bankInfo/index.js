@@ -60,7 +60,7 @@ export default function BankInfo() {
 
   return (
 <div className={styles.card}>
-  {/* حالت ویرایش */}
+  
   {isEditing ? (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <h3>ویرایش اطلاعات مالی</h3>
@@ -91,7 +91,7 @@ export default function BankInfo() {
       </div>
     </form>
   ) : (
-    /* حالت نمایش عادی */
+    
     <>
       <div className={styles.topInput}>
         <h3>اطلاعات مالی</h3>

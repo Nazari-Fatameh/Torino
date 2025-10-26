@@ -1,3 +1,4 @@
+
 export function calculateTourDuration(startDate, endDate) {
   const start = new Date(startDate);
   const end = new Date(endDate);
@@ -18,7 +19,6 @@ export function calculateTourDuration(startDate, endDate) {
     year: "numeric",
   }).format(end);
 
-
   const startMonthName = new Intl.DateTimeFormat("fa-IR", {
     month: "long",
   }).format(start);
@@ -28,6 +28,37 @@ export function calculateTourDuration(startDate, endDate) {
     nights: nights > 0 ? nights : 0,
     startDatePersian: persianStart.replace(/،/g, " / "),
     endDatePersian: persianEnd.replace(/،/g, " / "),
-    startMonthName: `${startMonthName}‌ماه`, 
+    startMonthName: `${startMonthName}‌ماه`,
   };
+}
+
+
+export function formatPersianDate(dateString) {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat("fa-IR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+}
+
+
+export function formatPersianDateNumeric(dateString) {
+  if (!dateString) return "-";
+  const date = new Date(dateString);
+
+  const formattedDate = new Intl.DateTimeFormat("fa-IR", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+
+  const formattedTime = new Intl.DateTimeFormat("fa-IR", {
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+
+  return `${formattedDate.replaceAll("‎", "").replaceAll(" ", "")} - ${formattedTime}`;
 }

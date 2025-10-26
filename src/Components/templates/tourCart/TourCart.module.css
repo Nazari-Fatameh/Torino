@@ -1,0 +1,275 @@
+.container {
+  width: 330px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  border: 1px solid #00000033;
+  border-radius: 10px;
+  position: relative;
+  height: 150px;
+}
+
+.statusEnded {
+  position: absolute;
+  display: inline-block;
+  background-color: #28a7454d;
+  color: #28a745;
+  margin: 10px 8px;
+  padding: 6px 12px;
+  border-radius: 27px;
+  left: 0;
+  font-weight: 400;
+  font-size: 6px;
+}
+
+.statusOngoing {
+  position: absolute;
+  display: inline-block;
+  background-color: #d1b9004d;
+  color: #d1b900;
+  margin: 10px 8px;
+  padding: 6px 12px;
+  border-radius: 27px;
+  left: 0;
+  font-weight: 400;
+  font-size: 6px;
+}
+
+.headerSection {
+  border-bottom: 1px solid #00000033;
+  padding: 20px 20px 5px;
+}
+
+.verticalDivider {
+  width: 1px;
+  background-color: #00000033;
+}
+
+.tourHeader {
+  display: flex;
+  gap: 20px;
+}
+
+.tourHeader div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tourHeader div p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+}
+
+.routeInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.returnDate h3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+}
+
+.routeInfo h3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+}
+
+.routeInfo,
+.returnDate p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #00000099;
+}
+
+.returnDate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+
+.footerSection div {
+  display: flex;
+  align-items: center;
+}
+
+.tourNumber p {
+  font-weight: 600;
+  font-size: 10px;
+  color: #00000080;
+}
+
+.tourNumber span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #282828;
+}
+
+.tourNumber {
+  gap: 13px;
+}
+
+.amountPaid {
+  font-weight: 600;
+  font-size: 10px;
+  color: #00000080;
+}
+
+.priceWrapper {
+  display: flex;
+  gap: 3px;
+}
+
+.priceWrapper p {
+  font-weight: 300;
+  font-size: 8px;
+  color: #00000080;
+}
+
+.priceWrapper span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #282828;
+}
+
+.paymentInfo {
+  gap: 20px;
+}
+
+
+@media (min-width: 392px) {
+  .container {
+    width: 480px;
+  }
+  .statusOngoing,
+  .statusEnded {
+    font-size: 8px;
+  }
+  .tourHeader div p {
+    font-size: 14px;
+  }
+  .returnDate h3,
+  .routeInfo h3 {
+    font-size: 16px;
+  }
+  .routeInfo,
+  .returnDate p {
+    font-size: 14px;
+  }
+  .tourNumber p,
+  .tourNumber span {
+    font-size: 14px;
+  }
+  .amountPaid {
+    font-size: 13px;
+  }
+  .priceWrapper p {
+    font-size: 10px;
+  }
+  .priceWrapper span {
+    font-size: 14px;
+    color: #000000;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 580px;
+  }
+  .statusOngoing,
+  .statusEnded {
+    font-size: 10px;
+  }
+  .tourHeader div p {
+    font-size: 14px;
+  }
+  .returnDate h3,
+  .routeInfo h3 {
+    font-size: 16px;
+  }
+  .routeInfo,
+  .returnDate p {
+    font-size: 14px;
+  }
+  .tourNumber p,
+  .tourNumber span {
+    font-size: 14px;
+  }
+  .amountPaid {
+    font-size: 13px;
+  }
+  .priceWrapper p {
+    font-size: 10px;
+  }
+  .priceWrapper span {
+    font-size: 14px;
+    color: #000000;
+  }
+}
+
+@media (min-width: 992px) {
+  .containerWrapper {
+    max-width: 800px;
+    border: 1px solid #00000033;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+  .statusOngoing,
+  .statusEnded {
+    padding: 1px 12px;
+    top: 4px;
+    left: 4px;
+  }
+  .timeSection {
+    display: flex;
+    gap: 25px;
+  }
+  .timeSection div {
+    display: flex;
+    gap: 15px;
+  }
+  .timeSection div h3 {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+  }
+  .timeSection div p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .headerSection {
+    padding: 0 15px 0 0;
+  }
+  .footerSection {
+    padding: 5px 15x;
+    display: flex;
+    justify-content: unset;
+  }
+  .tourHeader {
+    gap: 170px;
+  }
+  .tourHeader img {
+    width: 20px;
+    height: 20px;
+  }
+  .paymentInfo {
+    padding-right: 20px;
+  }
+  .tourNumber {
+    padding-left: 20px;
+  }
+}

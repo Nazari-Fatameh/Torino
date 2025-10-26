@@ -37,13 +37,12 @@ export const useFetchUserProfile = () => {
     queryFn: async () => {
       console.log("📡 Fetching /user/profile ...");
       const res = await api.get("/user/profile");
-      console.log("Response:", res.data);
+      console.log(" Response:", res.data);
       return res.data;
     },
     staleTime: 1000 * 60 * 5,
   });
 };
-
 
 export const useGetUserTours = () => {
   return useQuery({
@@ -51,9 +50,25 @@ export const useGetUserTours = () => {
     queryFn: async () => {
       try {
         const response = await api.get("/user/tours");
-        return response ?? null;
+        return response.data ?? [];
+       
       } catch (error) {
         return null;
+      }
+    },
+    staleTime: 1000 * 60 * 2,
+  });
+};
+export const useGetUseTransactions = () => {
+  return useQuery({
+    queryKey: ["user-transactions"],
+    queryFn: async () => {
+      try {
+        const response = await api.get("/user/transactions");
+        return response.data ?? []; 
+      } catch (error) {
+        console.log(error.message);
+        return []; 
       }
     },
     staleTime: 1000 * 60 * 2,

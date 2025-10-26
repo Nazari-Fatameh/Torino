@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TanstackQueryProvider>
-          {" "}
           <MainHeader />
           {children}
           <MainFooter />
