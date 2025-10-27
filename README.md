@@ -3,9 +3,9 @@
 **Torino** is a modern travel booking web application built with **Next.js 15** and **CSS Modules**. It allows users to explore and book tours, reserve tickets, and manage travel itineraries easily.
 
 <p align="center">
-  <img src="./images/reademephoto1.png" alt="Home" width="300" style="margin:10px;" />
-  <img src="./images/reademephoto2.png" alt="Tours" width="300" style="margin:10px;" />
-  <img src="./images/readmephoto3.png" alt="Booking" width="300" style="margin:10px;" />
+  <img src="./readMephoto/reademephoto1.png" alt="Home" width="300" style="margin:10px;" />
+  <img src="./readMephoto/reademephoto2.png" alt="Tours" width="300" style="margin:10px;" />
+  <img src="./readMephoto/readmephoto3.png" alt="Booking" width="300" style="margin:10px;" />
 </p>
 
 ---
