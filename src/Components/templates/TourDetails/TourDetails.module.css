@@ -37,6 +37,12 @@
   flex: 1;
 }
 
+.titleDayRow {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .title {
   font-size: 32px;
   font-weight: 700;
@@ -148,12 +154,16 @@
   font-weight: 500;
 }
 
-
 @media (max-width: 768px) {
+  .container {
+    margin: 10px auto;
+  }
+
   .divDetails {
     flex-direction: column;
     width: 100%;
     padding: 20px;
+    margin-top: 0px;
   }
 
   .picturTour {
@@ -161,24 +171,60 @@
     height: auto;
   }
 
-  .tourOption {
-    font-size: 12px;
+  .content {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titleDayRow {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .day {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+  }
+
+  .tourOption {
+    width: 100%;
+    margin-top: 8px;
+    gap: 15px;
+    font-size: 12px;
   }
 
   .priceRow {
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: 12px;
+    margin-top: 12px;
   }
 
   .buyButton {
-    width: 100%;
+    width: 154px;
+    height: 42px;
+  }
+
+  .price {
+    flex: 1;
+    text-align: left;
   }
 
   .tourProperty {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 12px;
+    margin-top: 12px;
   }
 
   .propertyItem {
@@ -194,8 +240,20 @@
   .propertyValue {
     font-size: 14px;
   }
+.tourProperty .propertyItem {
+    display: none;
 }
 
+
+.tourProperty .propertyItem:nth-last-child(3),
+.tourProperty .propertyItem:nth-last-child(2),
+.tourProperty .propertyItem:nth-last-child(1) {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
+}
 
 @media (min-width: 992px) {
   .divDetails {
@@ -204,5 +262,18 @@
 
   .tourProperty {
     flex-wrap: nowrap;
+  }
+
+  .titleDayRow {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .day {
+    font-size: 20px;
   }
 }

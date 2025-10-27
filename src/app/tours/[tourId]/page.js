@@ -42,10 +42,12 @@ async function TourDetails({ params }) {
         />
 
         <div className={styles.content}>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.day}>
-            {toPersianNumber(days)} روز و {toPersianNumber(nights)} شب
-          </p>
+           <div className={styles.titleDayRow}>
+    <h1 className={styles.title}>{title}</h1>
+    <p className={styles.day}>
+      {toPersianNumber(days)} روز و {toPersianNumber(nights)} شب
+    </p>
+  </div>
 
           <div className={styles.tourOption}>
             <span>
