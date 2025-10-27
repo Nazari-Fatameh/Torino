@@ -5,10 +5,31 @@
 }
 .notFoundTour {
   font-size: 32px;
-  margin: auto;
   font-family: "Yekan";
-  margin-right: 200px;
+  color: #ffffff;
+  text-align: center;
+  margin: 100px auto; 
+  display: block;
+  animation: slideFadeIn 0.8s ease forwards;
+  background-color: rgb(5, 141, 9);
+  width: 400px;
+  height: 80px;
+  border-radius: 20px;
 }
+
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(9);
+  }
+
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

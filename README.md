@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Torino Travel Booking
 
-## Getting Started
+**Torino** is a modern travel booking web application built with **Next.js 15** and **CSS Modules**. It allows users to explore and book tours, reserve tickets, and manage travel itineraries easily.
 
-First, run the development server:
+<p align="center">
+  <img src="public/image/readMephoto/readmephoto1.jpg" alt="Home" width="300" style="margin:10px;" />
+  <img src="public/image/readMephoto/readmephoto2.jpg" alt="Tours" width="300" style="margin:10px;" />
+  <img src="public/image/readMephoto/readmephoto3.jpg" alt="Booking" width="300" style="margin:10px;" />
+</p>
+
+---
+
+## 🌟 Features
+
+- Browse a variety of travel tours and packages
+- Search and filter tours by location, date, or type
+- Book tickets and manage reservations online
+- Responsive design for mobile, tablet, and desktop
+- Smooth UI/UX with modern React components
+- Form validations for secure user input
+- Toast notifications for successful actions
+
+---
+
+## 🛠️ Technologies
+
+- [Next.js 15](https://nextjs.org/) – React framework for server-side rendering and static site generation
+- [React](https://reactjs.org/) – Frontend library
+- [CSS Modules](https://github.com/css-modules/css-modules) – Scoped and modular CSS
+- [React Hook Form](https://react-hook-form.com/) – Form handling
+- [Yup](https://github.com/jquense/yup) – Form validation
+- [React Hot Toast](https://react-hot-toast.com/) – Notification system
+- JSON Server (optional) – Mock API for development
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Nazari-Fatemeh/Torino.git
+cd torino-frontend
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
