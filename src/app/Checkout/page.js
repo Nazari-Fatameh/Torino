@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
-import DateObject from "react-date-object";
 import DatePicker from "react-multi-date-picker";
 import { checkoutSchema } from "../../core/utils/validation";
 import { useGetUserBasket } from "@/core/services/queries";
@@ -43,20 +42,27 @@ export default function CheckoutPage() {
   const [birthDateState, setBirthDateState] = useState(null);
 
   const onSubmit = (formData) => {
+    
     const payload = {
       fullName: formData.fullName,
       nationalCode: formData.nationalCode,
-      gender: formData.gender,
-      birthDate: formData.birthDate,
+      gender: formData.gender || null,
+      birthDate: formData.birthDate
+        ? new Date(formData.birthDate).toISOString().split("T")[0] 
+        : null,
     };
+
+    console.log("payload to send:", payload); 
 
     checkout(payload, {
       onSuccess: () => {
         toast.success("خرید با موفقیت انجام شد!");
-    
         router.push("/profile/userTour");
       },
-      onError: () => toast.error("خطایی رخ داد، لطفاً دوباره تلاش کنید."),
+      onError: (err) => {
+        console.error(err);
+        toast.error("خطایی رخ داد، لطفاً دوباره تلاش کنید.");
+      },
     });
   };
 
@@ -79,8 +85,7 @@ export default function CheckoutPage() {
           <h2>{title}</h2>
           {duration && (
             <p>
-              {toPersianNumber(duration.days)} روز و{" "}
-              {toPersianNumber(duration.nights)} شب
+              {toPersianNumber(duration.days)} روز و {toPersianNumber(duration.nights)} شب
             </p>
           )}
         </div>
@@ -148,7 +153,7 @@ export default function CheckoutPage() {
                   locale={persian_fa}
                   onChange={(date) => {
                     setBirthDateState(date);
-                    field.onChange(date ? date.format("YYYY/MM/DD") : "");
+                    field.onChange(date ? date.toDate().toISOString().split("T")[0] : "");
                   }}
                   inputClass={styles.input}
                   placeholder="تاریخ تولد"

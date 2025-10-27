@@ -3,12 +3,10 @@ import api from "../config/api";
 import { setCookie } from "../utils/cookie";
 import toast from "react-hot-toast";
 
-
 export const useSendOtp = () => {
   const mutationFn = (data) => api.post("/auth/send-otp", data);
   return useMutation({ mutationFn });
 };
-
 
 export const useCheckOtp = () => {
   const queryClient = useQueryClient();
@@ -23,20 +21,15 @@ export const useCheckOtp = () => {
   return useMutation({ mutationFn, onSuccess });
 };
 
-
 export const useAddToBasket = () => {
   const mutationFn = (tourId) => api.put(`/basket/${tourId}`);
   return useMutation({ mutationFn });
 };
 
-
 export const useCheckout = () => {
   const mutationFn = (data) => api.post("/order", data);
   return useMutation({ mutationFn });
 };
-
-
-
 
 export const useUpdateUserProfile = (onSuccessCallback) => {
   const queryClient = useQueryClient();
@@ -59,6 +52,15 @@ export const useUpdateUserProfile = (onSuccessCallback) => {
       toast.error(error?.message || "مشکلی پیش آمده، دوباره تلاش کنید");
     },
   });
-}
+};
 
+export const useUpdateBankAccount = () => {
+  const queryClient = useQueryClient();
+  const mutationFn = (data) => api.put("/user/profile", data);
 
+  const onSuccess = (data) => {
+    queryClient.invalidateQueries({ queryKey: ["user-data"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};

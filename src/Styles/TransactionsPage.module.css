@@ -1,7 +1,6 @@
 .table {
   width: 100%;
   max-width: 330px;
-
   border-collapse: separate;
   border-spacing: 0;
   direction: rtl;
@@ -26,7 +25,10 @@
   font-size: 14px;
 }
 
+
 .row {
+  height: auto;      
+  min-height: 40px;  
   background-color: #ffffff;
   text-align: center;
   transition: background-color 0.2s ease-in-out;
@@ -37,7 +39,7 @@
 }
 
 .cell {
-  padding: 15px 10px;
+  padding: 10px 8px;
   font-family: "Vaziran", sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -59,11 +61,11 @@
   font-weight: 300;
   font-family: "Vaziran", sans-serif;
   color: #282828;
-  padding: 14px 0;
+  padding: 10px 0;
 }
 
 tr td:nth-child(1) {
-  font-size: 9px;
+  font-size: 12px;
   color: #282828;
 }
 
@@ -75,6 +77,7 @@ tr td:nth-child(1) {
     font-size: 12px;
   }
 }
+
 
 @media (min-width: 768px) {
   .hide {
@@ -88,7 +91,6 @@ tr td:nth-child(1) {
     color: rgba(0, 0, 0, 1);
   }
 }
-
 @media (min-width: 992px) {
   .table {
     max-width: 960px;

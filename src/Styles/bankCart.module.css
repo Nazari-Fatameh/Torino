@@ -1,0 +1,273 @@
+.card {
+  width: 872px;
+  border: 1px solid #00000033;
+  border-radius: 10px;
+  margin: 0 50px 100px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+
+  height: 140px;
+}
+
+.card h3 {
+  font-family: "Vaziran";
+  font-weight: 400;
+  font-size: 15px;
+  padding: 10px 10px 10px 0;
+  color: #000000;
+}
+
+.topInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.editInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.editInfo p {
+  font-family: "Vaziran";
+  font-weight: 400;
+  font-size: 13px;
+  color: #009eca;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainInfo {
+  display: grid;
+  gap: 10px;
+}
+
+
+.row {
+  display: flex;
+  gap: 50px;
+}
+
+.dataAccount {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data p,
+.dataAccount p {
+  font-family: "Vaziran";
+  font-weight: 300;
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.data span,
+.dataAccount span {
+  font-family: "Vaziran";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  text-align: right;
+  margin: 0;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputWrapper input {
+  padding: 10px 5px;
+  font-family: "Vaziran";
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #00000080;
+  color: #00000080;
+  outline: none;
+  transition: 0.2s;
+}
+
+.inputWrapper input:focus {
+  border-color: #28a745;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #00000033;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0 15px 0;
+}
+
+.addBtn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745;
+  color: #ffffff;
+  font-family: "Vaziran";
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.2s all ease-in;
+}
+
+.cancelBtn {
+  font-family: "Vaziran";
+  font-weight: 500;
+  font-size: 16px;
+  width: 140px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #28a745;
+  color: #28a745;
+  background-color: #ffffff;
+  transition: 0.2s all ease-in;
+}
+
+.cancelBtn:hover {
+  background-color: #d0fada;
+  color: #185000;
+}
+
+.addBtn:hover {
+  background: #027a2a;
+  color: #ffffff;
+}
+
+.error {
+  color: #ff1c03;
+  font-family: "Vaziran";
+  font-weight: 300;
+  font-size: 10px;
+  text-align: right;
+}
+
+.editing {
+  height: 180px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 0 10px 20px;
+    height: auto;
+    padding: 10px;
+  }
+
+  
+  .topInput {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+  .editInfo {
+    gap: 4px;
+    order: -1; 
+  }
+
+  .topInput h3 {
+    order: 0; 
+    font-size: 14px;
+  }
+
+  .row {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .dataAccount {
+    justify-content: flex-start;
+  }
+
+  .inputWrapper input {
+    width: 100%;
+  }
+
+  
+  .editing .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 48%;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .row {
+    gap: 100px;
+  }
+
+  .data {
+    gap: 70px;
+  }
+
+  .topInput {
+    padding: 0 20px;
+  }
+
+  .mainInfo {
+    padding: 0 20px;
+  }
+
+  .inputs {
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  .inputWrapper {
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .inputWrapper input {
+    width: 95%;
+    padding: 7px 5px;
+  }
+
+  .buttons {
+    justify-content: flex-end;
+    padding: 10px 0 10px 25px;
+  }
+
+  .buttons button {
+    width: 20%;
+    padding: 5px 0;
+  }
+}

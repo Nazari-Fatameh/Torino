@@ -3,28 +3,22 @@
   border-radius: 12px;
   padding: 15px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: auto;
-  height: 179px;
-  margin: 0 50px;
+  width: 872px;
+  margin: 0 50px 24px;
   display: flex;
-  margin-top: 0px;
   flex-direction: column;
+  font-family: "Vaziran";
 }
-
 .topInput {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
-
 .topInput h3 {
+  font-weight: 300;
   font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-  font-family: "Yekan";
 }
-
 .editInfo {
   display: flex;
   align-items: center;
@@ -34,96 +28,159 @@
   color: #009eca;
   cursor: pointer;
   font-size: 14px;
-  font-family: "Yekan";
 }
-
 .mainInfo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px 40px;
-}
-
-.data {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
 }
-
-.data p {
-  font-weight: 400;
-  margin: 0;
+.row {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+}
+.data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+.label {
+  font-weight: 300;
+  font-size: 14px;
   color: #555;
-  font-family: "Yekan";
+  white-space: nowrap;
+  min-width: 120px;
 }
-
-.data span,
+.value {
+  font-weight: 400;
+  font-size: 14px;
+  flex: 1;
+  text-align: left;
+}
 .data input,
 .data select {
-  font-family: "Yekan";
-  font-weight: 500;
+  padding: 10px 8px;
   font-size: 14px;
-}
-
-.data span.number,
-.data input.number {
+  border-radius: 5px;
+  border: 1px solid #00000080;
+  outline: none;
+  transition: 0.2s;
+  width: 100%;
   font-family: "Vaziran";
 }
-
-.input,
-.selectInput,
+.data input:focus,
+.data select:focus {
+  border-color: #28a745;
+}
 .dateInput {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px 10px;
   width: 100%;
-  font-family: "Yekan";
-}
-
-.dateInput {
-  cursor: pointer;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  box-sizing: border-box;
 }
-
+.dateInput input {
+  width: 255px;
+  padding: 10px 8px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #00000080;
+  font-family: "Vaziran";
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.divider {
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+}
 .buttons {
   display: flex;
+  justify-content: flex-end;
   gap: 15px;
-  margin-top: 0px;
-  font-size: 16px;
+  margin-top: 15px;
 }
-
 .saveBtn {
-  background-color: rgba(40, 167, 69, 1);
+  background-color: #28a745;
   color: #fff;
   border: none;
   border-radius: 8px;
   padding: 10px 12px;
   width: 140px;
   cursor: pointer;
-  font-family: "Yekan";
   height: 40px;
   transition: 0.3s;
+  font-family: "Vaziran";
 }
-
 .saveBtn:hover {
   background-color: #226e01;
 }
-
 .cancelBtn {
-  background-color: #ffffff;
-  border: 2px solid rgba(40, 167, 69, 1);
+  background-color: #fff;
+  border: 2px solid #28a745;
   border-radius: 8px;
   padding: 10px 12px;
-  color: rgba(40, 167, 69, 1);
+  color: #28a745;
   width: 140px;
   cursor: pointer;
   height: 40px;
-  font-family: "Yekan";
   transition: 0.3s;
+  font-family: "Vaziran";
 }
-
 .cancelBtn:hover {
   background-color: #e0f8ea;
-  
+  color: #28a745;
+}
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  font-family: "Vaziran";
+}
+.editing {
+  max-height: none;
+  overflow: visible;
+  transition: max-height 0.3s ease;
+}
+@media (max-width: 400px) {
+  .card {
+    width: 328px;
+    margin: 15px auto;
+    padding: 10px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .data {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .label {
+    min-width: 0;
+  }
+  .data input,
+  .data select,
+  .dateInput input {
+    width: 100%;
+    padding: 6px 8px;
+  }
+  .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  .saveBtn,
+  .cancelBtn {
+    width: 48%;
+    height: 36px;
+  }
+  .error {
+    font-size: 12px;
+  }
+  .editing {
+    max-height: none;
+    overflow: visible;
+  }
 }

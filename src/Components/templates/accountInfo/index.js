@@ -7,7 +7,7 @@ import api from "@/core/config/api";
 import toast from "react-hot-toast";
 import { fetchUserInfo } from "@/core/services/queries";
 import styles from "./accountInfo.module.css";
-import { toPersianNumber } from "../../../helper/convertNumbers"
+import { toPersianNumber } from "../../../helper/convertNumbers";
 
 export default function AccountInfo() {
   const { data: user, isLoading } = useQuery({
@@ -28,11 +28,11 @@ export default function AccountInfo() {
       return res.data;
     },
     onSuccess: () => {
-      toast.success("اطلاعات با موفقیت ویرایش شد");
+      toast.success("اطلاعات با موفقیت ویرایش شد ✅");
       queryClient.invalidateQueries(["user-info"]);
       setIsEditing(false);
     },
-    onError: () => toast.error("خطا در ویرایش اطلاعات"),
+    onError: () => toast.error("خطا در ویرایش اطلاعات ❌"),
   });
 
   const onSubmit = (data) => {
@@ -45,24 +45,35 @@ export default function AccountInfo() {
     <div className={styles.card}>
       <div className={styles.header}>
         <h3>اطلاعات حساب کاربری</h3>
+
+        {!isEditing && (
+          <button
+            onClick={() => {
+              reset({ email: user?.email || "" });
+              setIsEditing(true);
+            }}
+            className={styles.editBtn}
+          >
+            <img src="/image/svg/profileSVG/edit.svg" alt="edit" />
+            افزودن
+          </button>
+        )}
       </div>
 
       <div className={styles.infoList}>
-  
         <div className={styles.infoItem}>
           <p>شماره موبایل</p>
           <span>{user?.mobile ? toPersianNumber(user.mobile) : "_"}</span>
         </div>
 
         <div className={styles.infoItem}>
-          <p>ایمیل</p>
           {!isEditing ? (
-            <span className={styles.englishText}>{user?.email || "_"}</span>
+            <>
+              <p>ایمیل</p>
+              <span className={styles.englishText}>{user?.email || "_"}</span>
+            </>
           ) : (
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className={styles.inlineForm}
-            >
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.inlineForm}>
               <input
                 type="email"
                 {...register("email")}
@@ -75,22 +86,6 @@ export default function AccountInfo() {
                 تایید
               </button>
             </form>
-          )}
-        </div>
-
-       
-        <div className={styles.infoItem}>
-          {!isEditing && (
-            <button
-              onClick={() => {
-                reset({ email: user?.email || "" });
-                setIsEditing(true);
-              }}
-              className={styles.editBtn}
-            >
-              <img src="/image/svg/profileSVG/edit.svg" alt="edit" />
-             افزودن
-            </button>
           )}
         </div>
       </div>

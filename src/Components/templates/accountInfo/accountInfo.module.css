@@ -4,30 +4,31 @@
   padding: 15px;
   border: 1px solid #e0e0e0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: auto;
-height: 115px;
-margin:0 50px;
+  width: 879px;
+  height: 115px;
+  margin: 0 50px;
   display: flex;
-  margin-top: 0px;
   flex-direction: column;
+    margin-bottom: 24px;
 }
 
 .header {
   display: flex;
-
   align-items: center;
+  justify-content: space-between; 
   margin-bottom: 15px;
 }
 
 .header h3 {
-  font-family: "Yekan";
-    font-weight: 400;
-  font-size: 16px;
-  color: #000000;
- 
+  font-family: "Vaziran";
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .editBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   background: none;
   border: none;
   color: #009eca;
@@ -35,45 +36,47 @@ margin:0 50px;
   font-size: 14px;
   font-family: "Yekan";
 }
-.editBtn:hover{
-    background-color: white;
-  
+
+.editBtn img {
+  width: 16px;
+  height: 16px;
 }
+
+.editBtn:hover {
+  background-color: white;
+}
+
 .infoList {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 
 .infoItem {
   display: flex;
   justify-content: space-between;
-  font-family: "Yekan";
+  font-family: "Vaziran";
+  font-size: 14px;
   padding: 8px 0;
   font-weight: 300;
+  color: #555;
 }
 
-.form {
+.inlineForm {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.inputWrapper {
-  display: flex;
-  font-family: "Yekan";
-
-  gap: 60px;
-}
-
-.input {
-  border: 1px solid #ccc;
+.inlineInput {
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 6px;
-  padding: 8px;
-  font-family: "Yekan";
+  padding: 6px 8px;
+  font-family: "Vaziran";
   font-size: 14px;
+  width: 180px;
+  direction: ltr;
 }
 
 .saveBtn {
@@ -81,38 +84,86 @@ margin:0 50px;
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 12px;
-  margin-right: 100px;
+  padding: 8px 12px;
   width: 100px;
   cursor: pointer;
   font-family: "Yekan";
-  height: 40px;
+  height: 38px;
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 .saveBtn:hover {
   background-color: #226e01;
-  transition: all 1s;
-}
-.inlineForm {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.inlineInput {
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  padding: 6px 8px;
-  font-family: "Yekan";
-  margin-right: 20px;
-  font-size: 14px;
-  width: 180px;
-  direction: ltr; 
 }
 
 .englishText {
   direction: ltr;
-  font-family:"Vaziran"; 
+  font-family: "Vaziran";
   font-size: 14px;
+  font-weight: 300;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 328px;
+    height: auto;
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .header h3 {
+    font-size: 14px;
+  }
+
+  .editBtn {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+
+  .infoList {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .infoItem {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    padding: 4px 0;
+  }
+
+  .inlineForm {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .inlineInput {
+    width: 60%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 5px 6px;
+  }
+
+  .saveBtn {
+    width: 35%;
+    max-width: 110px;
+    height: 32px;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin-left: 0;
+  }
 }

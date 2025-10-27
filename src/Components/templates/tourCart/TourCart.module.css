@@ -7,6 +7,9 @@
   position: relative;
   height: 150px;
 }
+.cardContent {
+  margin-top: 10px;
+}
 
 .statusEnded {
   position: absolute;
@@ -36,6 +39,7 @@
 
 .headerSection {
   border-bottom: 1px solid #00000033;
+  margin-bottom: 10px;
   padding: 20px 20px 5px;
 }
 
@@ -47,6 +51,7 @@
 .tourHeader {
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .tourHeader div {
@@ -71,6 +76,11 @@
   font-weight: 600;
   font-size: 14px;
   color: #000000;
+  gap: 5px;
+}
+
+.routeInfo span {
+  margin: 0 6px;
 }
 
 .routeInfo h3 {
@@ -95,7 +105,7 @@
 .footerSection {
   display: flex;
   justify-content: space-between;
-  padding: 8px 10px;
+  padding: 18px 20px;
 }
 
 .footerSection div {
@@ -147,10 +157,17 @@
 }
 
 
+@media (max-width: 391px) {
+  .footerSection {
+    margin-top: -15px; 
+  }
+}
+
 @media (min-width: 392px) {
   .container {
     width: 480px;
   }
+
   .statusOngoing,
   .statusEnded {
     font-size: 8px;
@@ -180,6 +197,7 @@
     font-size: 14px;
     color: #000000;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -255,7 +273,7 @@
     padding: 0 15px 0 0;
   }
   .footerSection {
-    padding: 5px 15x;
+    padding: 18px 10px;
     display: flex;
     justify-content: unset;
   }
@@ -268,6 +286,7 @@
   }
   .paymentInfo {
     padding-right: 20px;
+    margin-top: 0;
   }
   .tourNumber {
     padding-left: 20px;

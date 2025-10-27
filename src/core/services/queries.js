@@ -35,7 +35,7 @@ export const useFetchUserProfile = () => {
   return useQuery({
     queryKey: ["user-profile"],
     queryFn: async () => {
-      console.log("📡 Fetching /user/profile ...");
+      console.log(" Fetching /user/profile ...");
       const res = await api.get("/user/profile");
       console.log(" Response:", res.data);
       return res.data;

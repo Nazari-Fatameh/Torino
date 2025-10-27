@@ -55,7 +55,8 @@ function TourCart({ tour }) {
           <div className={styles.timeSection}>
             <div className={styles.routeInfo}>
               <h3>
-                {cityToPersian(tour.origin.name)} به
+                {cityToPersian(tour.origin.name)} 
+                <span>&nbsp;به&nbsp;</span>
                 {cityToPersian(tour.destination.name)}
               </h3>
               <p>{duration.startDatePersian}</p>

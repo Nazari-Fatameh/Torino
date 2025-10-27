@@ -4,7 +4,8 @@ import "./globals.css";
 import MainHeader from "../Components/layout/Header/MainHeader";
 import MainFooter from "@/Components/layout/Footer/MainFooter";
 import TanstackQueryProvider from "@/Components/partials/provider/TanstackQueryProvider";
-import { Toaster } from "react-hot-toast";
+
+import CustomToaster from "@/Components/atoms/CustomToaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,8 @@ export default function RootLayout({ children }) {
           <MainFooter />
         </TanstackQueryProvider>
 
-        <Toaster/>
+       <CustomToaster/>
+
       </body>
     </html>
   );

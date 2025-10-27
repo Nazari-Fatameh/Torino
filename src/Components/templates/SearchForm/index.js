@@ -91,17 +91,18 @@ export default function SearchForm() {
               className={styles.selectBox}
               onClick={() => setOriginOpen(!originOpen)}
             >
+                      <Image
+                src="/image/locationU.svg"
+                width={18}
+                height={18}
+                alt="location"
+              />
               <span>
                 {field.value
                   ? originOptions.find((o) => o.id === field.value)?.label
                   : "مبدا"}
               </span>
-              <Image
-                src="/image/svg/location.svg"
-                width={18}
-                height={18}
-                alt="location"
-              />
+      
             </div>
             {originOpen && (
               <div className={styles.dropdownList}>
@@ -133,17 +134,18 @@ export default function SearchForm() {
               className={styles.selectBox}
               onClick={() => setDestinationOpen(!destinationOpen)}
             >
+                  <Image
+                src="/image/global.svg"
+                width={18}
+                height={18}
+                alt="location"
+              />
               <span>
                 {field.value
                   ? destinationOptions.find((o) => o.id === field.value)?.label
                   : "مقصد"}
               </span>
-              <Image
-                src="/image/svg/location.svg"
-                width={18}
-                height={18}
-                alt="location"
-              />
+          
             </div>
             {destinationOpen && (
               <div className={styles.dropdownList}>
@@ -176,17 +178,18 @@ export default function SearchForm() {
               className={styles.selectBox}
               onClick={() => setDateOpen(!dateOpen)}
             >
+                  <Image
+                src="/image/calendarU.svg"
+                width={18}
+                height={18}
+                alt="calendar"
+              />
               <span>
                 {value?.startDate
                   ? `${value.startDate} - ${value.endDate}`
                   : "تاریخ"}
               </span>
-              <Image
-                src="/image/svg/calendar.svg"
-                width={18}
-                height={18}
-                alt="calendar"
-              />
+          
             </div>
             {dateOpen && (
               <div className={styles.dropdownList}>
