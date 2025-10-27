@@ -38,7 +38,7 @@ export default function TransactionsPage() {
         {data && data.length > 0 ? (
           data.map((item) => (
             <tr key={item.id} className={styles.row}>
-              <td className={styles.cell}>
+              <td className={`${styles.cell} ${styles.firstColumn}`}>
                 {formatPersianDateNumeric(item.createdAt)}
               </td>
               <td className={styles.cell}>

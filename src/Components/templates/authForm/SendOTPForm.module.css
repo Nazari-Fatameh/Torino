@@ -49,8 +49,8 @@
   margin-top: 30px;
 }
 
-button:hover {
-  background-color: #218838;
+.submitButton:hover {
+  background-color: #218838; 
 }
 
 .error {

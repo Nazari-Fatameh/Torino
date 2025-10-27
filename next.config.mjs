@@ -1,12 +1,16 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, 
-  images: {
-    domains: ['localhost'], 
+  reactStrictMode: true,
+  images: { domains: ['localhost'] },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
   },
-  experimental: {
-    appDir: true, 
+  turbopack: {
+    root: '.',
   },
 };
-
 export default nextConfig;
