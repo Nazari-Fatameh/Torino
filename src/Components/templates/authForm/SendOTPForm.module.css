@@ -10,6 +10,8 @@
   text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
+  font-family: "Yekan";
+  font-weight: 600px;
 }
 
 .lableModal {
@@ -33,6 +35,8 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: "Vaziran";
+
+  font-size: 20px;
 }
 
 .submitButton {
@@ -50,7 +54,7 @@
 }
 
 .submitButton:hover {
-  background-color: #218838; 
+  background-color: #218838;
 }
 
 .error {
@@ -66,4 +70,50 @@
   border-radius: 10px;
   padding: 10px 16px;
   box-shadow: 0 3px 10px rgba(248, 22, 22, 0.15);
+}
+@media (min-width: 900px) {
+  .titerModal {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: "Vaziran";
+    font-weight: 600px;
+  }
+
+  .lableModal {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 300;
+    margin-bottom: 10px;
+    height: 25px;
+    align-self: flex-start;
+    margin-top: 30px;
+    font-style: light;
+    margin-right: 30px;
+  }
+
+  .inputModal {
+    font-size: 20px;
+
+    width: 491px;
+    height: 54px;
+    padding: 8px 10px;
+ 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+
+
+  }
+
+  .submitButton {
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 19px;
+
+    width: 491px;
+    height: 54px;
+  }
 }

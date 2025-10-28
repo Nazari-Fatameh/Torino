@@ -5,8 +5,8 @@ function ModalContainer({
   children,
   isOpen,
   setIsOpen,
-  showCloseButton = true, 
-  topElement = null,     
+  showCloseButton = true,
+  topElement = null,
 }) {
   if (!isOpen) return null;
 
@@ -20,12 +20,16 @@ function ModalContainer({
     <div className={styles.container} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
         {showCloseButton && (
-          <button onClick={() => setIsOpen(false)} className={styles.closeButton}>
-            +
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className={styles.closeButton}
+          >
+            ×
           </button>
         )}
 
-        {topElement && <div className={styles.topElement}>{topElement}</div>}
+        {topElement && <div className={styles.topButtonWrapper}>{topElement}</div>}
 
         {children}
       </div>

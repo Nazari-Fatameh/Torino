@@ -3,52 +3,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
-.closeButton {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ffffff;
-  border: none;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.closeButton:hover {
-  background: #e0e0e0;
-}
-
-.titerModal {
-  font-size: 24px;
+.titrModal {
+  font-size: 22px;
   font-weight: 600;
-  text-align: center;
-  margin-top: 44px;
-  margin-bottom: 20px;
-  padding-top: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 .lableModal {
   font-size: 14px;
-  color: rgba(0, 0, 0, 1);
+  color: #000;
   font-weight: 400;
   margin-bottom: 6px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .inputModal {
   width: 90%;
-  max-width: 280px;
+  max-width: 300px;
   padding: 12px;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
 .submitButton {
@@ -60,19 +47,25 @@
   cursor: pointer;
   font-size: 16px;
   width: 90%;
-  max-width: 280px;
+  max-width: 300px;
   font-family: "Yekan", sans-serif;
-  margin-top: 28px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 .submitButton:hover {
   background-color: #218838;
 }
 
-.error {
-  color: red;
-  font-size: 13px;
-  margin-bottom: 10px;
+.otpInput {
+  border: 1px solid silver;
+  border-radius: 6px;
+  width: 45px !important;
+  height: 45px;
+  margin: 4px;
+  text-align: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .toast {
@@ -84,4 +77,41 @@
   padding: 10px 16px;
   box-shadow: 0 3px 10px rgba(248, 22, 22, 0.15);
   text-align: center;
+}
+
+@media (min-width: 900px) {
+  .modalContent {
+    max-width: 500px;
+    padding: 30px 0;
+  }
+
+  .titrModal {
+    font-size: 26px;
+    margin-top: -27px;
+  }
+
+  .lableModal {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .inputModal {
+    max-width: 380px;
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .submitButton {
+    max-width: 380px;
+    height: 58px;
+    font-size: 18px;
+    padding: 16px 0;
+    margin-top: 20px;
+  }
+
+  .otpInput {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 22px !important;
+  }
 }

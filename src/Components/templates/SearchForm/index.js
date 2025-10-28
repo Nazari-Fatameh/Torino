@@ -19,6 +19,7 @@ export default function SearchForm() {
       date: null,
     },
   });
+
   const { getQuery } = useQuery();
 
   const [originOpen, setOriginOpen] = useState(false);
@@ -44,9 +45,7 @@ export default function SearchForm() {
 
   const originRef = useRef(null);
   const destinationRef = useRef(null);
-  const dateRef = useRef(null);
 
-  
   useEffect(() => {
     const originId = getQuery("originId") || "";
     const destinationId = getQuery("destinationId") || "";
@@ -57,17 +56,16 @@ export default function SearchForm() {
     });
   }, []);
 
-  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (originRef.current && !originRef.current.contains(event.target)) {
         setOriginOpen(false);
       }
-      if (destinationRef.current && !destinationRef.current.contains(event.target)) {
+      if (
+        destinationRef.current &&
+        !destinationRef.current.contains(event.target)
+      ) {
         setDestinationOpen(false);
-      }
-      if (dateRef.current && !dateRef.current.contains(event.target)) {
-        setDateOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -81,7 +79,6 @@ export default function SearchForm() {
 
   return (
     <form className={styles.container} onSubmit={handleSubmit(submitHandler)}>
-    
       <Controller
         name="originId"
         control={control}
@@ -91,7 +88,7 @@ export default function SearchForm() {
               className={styles.selectBox}
               onClick={() => setOriginOpen(!originOpen)}
             >
-                      <Image
+              <Image
                 src="/image/locationU.svg"
                 width={18}
                 height={18}
@@ -102,7 +99,6 @@ export default function SearchForm() {
                   ? originOptions.find((o) => o.id === field.value)?.label
                   : "مبدا"}
               </span>
-      
             </div>
             {originOpen && (
               <div className={styles.dropdownList}>
@@ -134,7 +130,7 @@ export default function SearchForm() {
               className={styles.selectBox}
               onClick={() => setDestinationOpen(!destinationOpen)}
             >
-                  <Image
+              <Image
                 src="/image/global.svg"
                 width={18}
                 height={18}
@@ -145,7 +141,6 @@ export default function SearchForm() {
                   ? destinationOptions.find((o) => o.id === field.value)?.label
                   : "مقصد"}
               </span>
-          
             </div>
             {destinationOpen && (
               <div className={styles.dropdownList}>
@@ -168,38 +163,32 @@ export default function SearchForm() {
         )}
       />
 
-    
       <Controller
         name="date"
         control={control}
         render={({ field: { onChange, value } }) => (
-          <div className={styles.calender} ref={dateRef}>
+          <div className={styles.calender}>
             <div
               className={styles.selectBox}
               onClick={() => setDateOpen(!dateOpen)}
             >
-                  <Image
+              <Image
                 src="/image/calendarU.svg"
                 width={18}
                 height={18}
                 alt="calendar"
               />
-              <span>
-                {value?.startDate
-                  ? `${value.startDate} - ${value.endDate}`
-                  : "تاریخ"}
-              </span>
-          
+              <span>تاریخ</span>
             </div>
             {dateOpen && (
               <div className={styles.dropdownList}>
                 <DatePicker
                   value={value}
-                  onChange={(e) =>
-                    onChange({ startDate: e.from, endDate: e.to })
-                  }
+                  onChange={(e) => onChange({ from: e.from, to: e.to })}
                   range
-                  inputClassName={styles.hiddenDateInput}
+                  inputClassName={styles.dateInput}
+                  containerClassName={styles.dateContainer}
+                  onClick={(e) => e.stopPropagation()}
                 />
               </div>
             )}

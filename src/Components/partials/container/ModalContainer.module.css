@@ -27,21 +27,45 @@
 .closeButton {
   position: absolute;
   top: 10px;
-  left: 15px;
-  background: #ffffff;
+  left: 10px;
+  background: transparent;
   border: none;
-  border-radius: 50%;
-
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
-  transition: background 0.2s;
-  rotate: calc(45deg);
+  color: #333;
+  z-index: 10;
+  rotate: 90deg;
 }
 
 .closeButton:hover {
   background-color: #ffffff;
   color: #cd0505;
-  font-size:25px ;
+  font-size: 25px;
+}
 
-  
+@media (min-width: 900px) {
+  .container > div {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  max-width: 560px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: "Yekan";
+  height: 362px;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+  rotate: 90deg;
+}
+
 }

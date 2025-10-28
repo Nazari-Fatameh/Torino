@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
+import toast from "react-hot-toast"; 
 import styles from "./AccountMenu.module.css";
 import { toPersianNumber } from "../../../helper/convertNumbers";
 
@@ -16,6 +17,9 @@ function AccountMenu({ user, setUser }) {
     Cookies.remove("refreshToken");
     setUser(null);
     setDropdownOpen(false);
+
+    
+    toast.success("از حساب کاربری خارج شدید");
   };
 
   useEffect(() => {
@@ -36,21 +40,18 @@ function AccountMenu({ user, setUser }) {
         className={styles.userButton}
         onClick={() => setDropdownOpen((prev) => !prev)}
       >
-        <img src={"/image/SVG/profile.svg"} />{" "}
+        <img src={"/image/SVG/profile.svg"} alt="profile" />{" "}
         <span>{toPersianNumber(user.mobile)}</span>
-        <img src={"/image/SVG/arrowDown.svg"} />
+        <img src={"/image/SVG/arrowDown.svg"} alt="arrow down" />
       </button>
 
       {dropdownOpen && (
         <div className={styles.dropdown}>
           <label className={styles.labelNumber}>
-              <span className={styles.svgMobile}>
-                <img src={"/image/SVG/profileN.svg"} />
-              </span>
-            <span className={styles.mobile}>
-              {toPersianNumber(user.mobile)}
-            
+            <span className={styles.svgMobile}>
+              <img src={"/image/SVG/profileN.svg"} alt="profile" />
             </span>
+            <span className={styles.mobile}>{toPersianNumber(user.mobile)}</span>
           </label>
 
           <button
@@ -59,13 +60,13 @@ function AccountMenu({ user, setUser }) {
           >
             اطلاعات حساب کاربری
             <span>
-              <img src={"/image/SVG/profileL.svg"} />
+              <img src={"/image/SVG/profileL.svg"} alt="profile" />
             </span>
           </button>
           <button className={styles.dropdownItem} onClick={handleLogout}>
             خروج از حساب کاربری
             <span>
-              <img src={"/image/SVG/logout.svg"} />
+              <img src={"/image/SVG/logout.svg"} alt="logout" />
             </span>
           </button>
         </div>

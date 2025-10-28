@@ -28,22 +28,23 @@ function AuthForm({ setUser }) {
     <div>
       <SignInButtonM onClick={() => setIsOpen(true)} />
 
-      {step === 1 && (
-        <ModalContainer isOpen={isOpen} setIsOpen={setIsOpen} showCloseButton={false}>
-          <SendOTPform setStep={setStep} mobile={mobile} setMobile={setMobile} />
-        </ModalContainer>
-      )}
+{step === 1 && (
+  <ModalContainer isOpen={isOpen} setIsOpen={setIsOpen} showCloseButton={true}>
+    <SendOTPform setStep={setStep} mobile={mobile} setMobile={setMobile} />
+  </ModalContainer>
+)}
 
-      {step === 2 && (
-        <ModalContainer
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          showCloseButton={false}
-          topElement={<img src="image/svg/arrow-left.svg" alt="Arrow" />}
-        >
-          <CheckOTPForm setStep={setStep} mobile={mobile} setIsOpen={setIsOpen} />
-        </ModalContainer>
-      )}
+{step === 2 && (
+  <ModalContainer
+    isOpen={isOpen}
+    setIsOpen={setIsOpen}
+    showCloseButton={true}
+    topElement={<img src="/image/svg/arrow-left.svg" alt="Arrow" />}
+  >
+    <CheckOTPForm setStep={setStep} mobile={mobile} setIsOpen={setIsOpen} />
+  </ModalContainer>
+)}
+
     </div>
   );
 }

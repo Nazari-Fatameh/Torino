@@ -1,23 +1,19 @@
 "use client";
-
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import styles from "./CheckOTPForm.module.css";
 import OTPInput from "react-otp-input";
 import { useCheckOtp } from "@/core/services/mutations";
 import toast from "react-hot-toast";
 import ResendTimer from "@/Components/atoms/inputs/ResendTimer";
 
-function CheckOTPForm({ mobile, setStep, setIsOpen }) {
+function CheckOTPForm({ mobile, setStep, setIsOpen, onSubmitArrow }) {
   const [code, setCode] = useState("");
   const { isPending, mutate } = useCheckOtp();
-
 
   const handleChange = (otp) => setCode(otp);
 
   const submitHandler = (event) => {
-    event.preventDefault();
-
+    if (event) event.preventDefault();
     if (isPending) return;
 
     if (!code || code.trim() === "") {
@@ -37,7 +33,6 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
           toast.success("ورود با موفقیت انجام شد ✅");
           setStep(1);
           setIsOpen(false);
-      
         },
         onError: (error) => {
           toast.error(error?.response?.data?.message || "کد تأیید اشتباه است", {
@@ -60,17 +55,10 @@ function CheckOTPForm({ mobile, setStep, setIsOpen }) {
           value={code}
           onChange={handleChange}
           numInputs={6}
-          renderInput={(props) => <input {...props} />}
-          inputStyle={{
-            border: "1px solid silver",
-            borderRadius: "6px",
-            width: "45px",
-            height: "45px",
-            margin: "3px",
-            marginTop: "30px",
-            textAlign: "center",
-            fontSize: "18px",
-          }}
+          renderInput={(props) => (
+            <input {...props} className={styles.otpInput} />
+          )}
+          inputStyle={{}}
         />
       </div>
 
