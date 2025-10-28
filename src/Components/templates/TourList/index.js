@@ -7,7 +7,11 @@ import { toPersianNumber } from "../../../helper/convertNumbers";
 import { fleetVehicleToPersian } from "../../../helper/convertfleetVehicleMap";
 function TourList({ tourData }) {
   if (!tourData?.length)
-    return <p className={styles.notFoundTour}>متاسفانه تور جدیدی یافت نشد</p>;
+    return (
+      <p className={styles.notFoundTour}>
+        متاسفانه تور جدیدی یافت نشد <span>اتصال به سرور برقرار نیست </span>
+      </p>
+    );
 
   return (
     <div className={styles.wrapper}>
@@ -35,10 +39,10 @@ function TourList({ tourData }) {
 
               <div className={styles.tourSummary}>
                 <span className={styles.summaryText}>
-                  {`${startMonthName} . ${toPersianNumber(
-                    days
-                  )} روزه -
-           ${fleetVehicleToPersian(tour.fleetVehicle)} - ${tour.options.join(" - ")}`}
+                  {`${startMonthName} . ${toPersianNumber(days)} روزه -
+           ${fleetVehicleToPersian(tour.fleetVehicle)} - ${tour.options.join(
+                    " - "
+                  )}`}
                 </span>
               </div>
 

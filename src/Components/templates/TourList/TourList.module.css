@@ -4,19 +4,23 @@
   max-width: 1300px;
 }
 .notFoundTour {
-  font-size: 32px;
+  font-size: 30px;
   font-family: "Yekan";
   color: #ffffff;
   text-align: center;
-  margin: 100px auto; 
+  margin: 90px auto;
   display: block;
-  animation: slideFadeIn 0.8s ease forwards;
-  background-color: rgb(5, 141, 9);
+  animation: slideFadeIn 0.8s ease forwards,
+    glowShadow 2s ease-in-out infinite alternate;
+  background-color: rgb(30, 145, 34);
   width: 400px;
-  height: 80px;
+  height: 100px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
 
 @keyframes slideFadeIn {
   0% {
@@ -25,9 +29,17 @@
   }
   100% {
     opacity: 1;
-    transform: translateY(9);
+    transform: translateY(0);
   }
+}
 
+@keyframes glowShadow {
+  0% {
+    box-shadow: 0 0 50px rgba(8, 114, 12, 0.4), 0 0 10px rgba(5, 141, 9, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(23, 91, 25, 0.8), 0 0 50px rgba(5, 141, 9, 0.6);
+  }
 }
 
 .container {
@@ -82,14 +94,13 @@
 }
 .tourSummary {
   width: 100%;
-  overflow: hidden;       
-  white-space: nowrap;     
-  text-overflow: ellipsis; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-family: "Yekan";
   color: rgba(40, 40, 40, 0.7);
 }
-
 
 .card a {
   background-color: rgba(40, 167, 69, 1);
@@ -136,5 +147,10 @@
 @media (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
+  }
+  .notFoundTour {
+    width: 300px;
+    font-size: 24px;
+    margin-top: 30px;
   }
 }
