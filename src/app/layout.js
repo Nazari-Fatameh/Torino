@@ -4,8 +4,8 @@ import "./globals.css";
 import MainHeader from "../Components/layout/Header/MainHeader";
 import MainFooter from "@/Components/layout/Footer/MainFooter";
 import TanstackQueryProvider from "@/Components/partials/provider/TanstackQueryProvider";
-
 import CustomToaster from "@/Components/atoms/CustomToaster";
+import CustomScrollbar from "../Components/atoms/CustomScrollbar"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,13 +27,20 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TanstackQueryProvider>
-          <MainHeader />
-          {children}
-          <MainFooter />
+          
+          <CustomScrollbar
+            style={{
+              height: "100vh", 
+              backgroundColor: "#fff",
+            }}
+          >
+            <MainHeader />
+            <main>{children}</main>
+            <MainFooter />
+          </CustomScrollbar>
         </TanstackQueryProvider>
 
-       <CustomToaster/>
-
+        <CustomToaster />
       </body>
     </html>
   );
